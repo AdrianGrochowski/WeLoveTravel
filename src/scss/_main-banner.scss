@@ -1,0 +1,106 @@
+.main-banner {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-banner-title {}
+
+.main-banner-text {
+  max-width: 850px;
+  font-size: 19px;
+  color: rgba(#fff, 0.34);
+  text-align: center;
+}
+
+.main-banner-btn {}
+
+.main-banner-title {
+  color: white;
+  font-size: 45px;
+  }
+
+  .one {
+  color: $colorPrimary;
+}
+
+     .main-banner-btn {
+                padding:20px 50px;
+                border:1px solid rgba(255,255,255,0.5);
+                color:#fff;
+                text-transform: uppercase;
+                border-radius: 30px;
+                background: transparent;
+                position: relative;
+                transition:0.3s border-color;
+                font-size: 16px;
+                font-weight: bold;
+                transition:1s all;
+                cursor: pointer;
+                color:rgba(255,255,255,0.8);
+                text-decoration: none;
+                margin-top: 40px;
+            }
+            .main-banner-btn:before {
+                content:'';
+                width:100%;
+                height:100%;
+                border:1px solid rgba(255,255,255,1);
+                border-radius: 30px;
+                position: absolute;
+                left:50%;
+                top:50%;
+                transform:translate(-50%, -50%);
+                opacity:0;
+            }
+            .main-banner-btn:hover {
+                border-color: rgba(255,255,255,1);
+                background: rgba(255,255,255,0.04);
+            }
+            .main-banner-btn:hover:before {
+                animation: animBtn 1s 0s 1 linear;
+            }
+
+            @keyframes animBtn {
+                0% {
+                    opacity:0.3;
+                }
+                100% {
+                    width:180%;
+                    border-radius: 90px;
+                    height:250%;
+                    opacity:0;
+                }
+            }
+
+.main-banner-indicator {
+  width: 25px;
+  height: 50px;
+  border:1px solid rgba(#fff, 0.6);
+  position: absolute;
+  bottom:20px;
+  transform: translateX(-50%);
+  border-radius: 13px;
+}
+
+.main-banner-indicator:after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(#fff, 0.9);
+  position: absolute;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  animation: animBannerInd 1s 0s infinite alternate;
+}
+
+@keyframes animBannerInd {
+  0% {top: 10px;}
+  100% {top:20px;}
+}

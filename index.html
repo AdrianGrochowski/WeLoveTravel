@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800|Poiret+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="main-hero">
+  <div class="container">
+    <header class="main-header">
+      <!-- <a href="/" class="main-logo">
+        <img src="/images/logo.png" alt="logo">
+      </a> -->
+
+      <nav class="main-nav">
+        <ul>
+          <li> <a href="#">Home Page</a> </li>
+          <li> <a href="#">Music</a> </li>
+          <li> <a href="#">About Us</a> </li>
+          <li> <a href="#">Contact</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-banner">
+      <h1 class="main-banner-title">
+        <span>WE</span>
+        <span class="one">LOVE</span>
+        <span>TRAVEL</span>
+      </h1>
+
+    <div class="main-banner-text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam non reiciendis in officia, debitis ipsa corporis!
+    </div>
+
+    <a href="" class="btn main-banner-btn">
+      Key Features
+    </a>
+
+    <div class="main-banner-indicator"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="main-paralax">
+  <div class="container">
+    <h2 class="main-paralax-title">
+      <span>Love to</span> travel
+    </h2>
+    <div class="main-paralax-text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam non reiciendis in officia, debitis ipsa corporis!
+    </div>
+  </div>
+
+
+</div>
+
+<div class="main-contact">
+  <div class="container">
+    <header class="section-header">
+        <span class="section-title-text">stay tuned</span>
+        <h2 class="section-title">Contact with Us</h2>
+    </header>
+
+    <div class="main-contact-text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam non reiciendis in officia, debitis ipsa corporis!
+    </div>
+
+    <form id="mainForm" action="http://domanart.pl/CODERS/LOD_FER_S_24/files/warsztaty/send-script.php" method="post" class="main-contact-form">
+                <div class="form-row">
+                    <label for="formName">Name and surname:</label>
+                    <input type="text" required pattern="[a-zA-ZąĄćĆęĘłŁńŃóÓśŚźŹżŻ ]+" name="formName" id="formName" placeholder="Name and surname:">
+                </div>
+                <div class="form-row">
+                    <label for="formEmail">Email:</label>
+                    <input type="email" required pattern="^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$" name="formEmail" id="formEmail" placeholder="Email:">
+                </div>
+                <div class="form-row">
+                    <label for="formMessage">Message:</label>
+                    <textarea name="formMessage" pattern=".+" required id="formMessage" placeholder="Message:"></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="btn form-btn">Wyślij</button>
+                </div>
+            </form>
+  </div>
+</div>
+
+<div class="main-map" id="mainMap"></div>
+
+<script>
+     function initMap() {
+       var lodz = {lat: 51.771674, lng: 19.462252};
+       var map = new google.maps.Map(document.getElementById('mainMap'), {
+           zoom: 14,
+           center: lodz,
+           styles: [{"featureType": "all", "elementType": "labels.text.fill", "stylers": [{"saturation": 36 }, {"color": "#000000"}, {"lightness": 40 } ] }, {"featureType": "all", "elementType": "labels.text.stroke", "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16 } ] }, {"featureType": "all", "elementType": "labels.icon", "stylers": [{"visibility": "off"} ] }, {"featureType": "administrative", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 20 } ] }, {"featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 17 }, {"weight": 1.2 } ] }, {"featureType": "landscape", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 20 } ] }, {"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 21 } ] }, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 17 } ] }, {"featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 29 }, {"weight": 0.2 } ] }, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 18 } ] }, {"featureType": "road.local", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 16 } ] }, {"featureType": "transit", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 19 } ] }, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 17 } ] } ]
+           // dodalismy czarny motyw na mape
+       });
+       var marker = new google.maps.Marker({
+           position: lodz,
+           map: map,
+           icon: 'images/marker.png'  // dodajemy marker do mapy
+       });
+     }
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE11TEGnFq9aEW0p_qbR2OCZp_cDJcH7c&callback=initMap">
+   </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
