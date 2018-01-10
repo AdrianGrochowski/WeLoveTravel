@@ -1,0 +1,11 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-logo {
+    margin:10px;
+    img {
+      width: 60px;
+    }
+}
